@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Celsius a Fahrenheit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Conversor de Celsius a Fahrenheit</h2>
+
+<label for="celsius">Grados Celsius:</label>
+<input type="text" id="celsius" placeholder="Ingrese los grados Celsius">
+
+<button onclick="convertir()">Convertir</button>
+
+<p id="resultado"></p>
+
+<script>
+    function convertir() {
+        // Obtener el valor de los grados Celsius
+        var celsius = document.getElementById("celsius").value;
+
+        // Verificar si se ingresó un número válido
+        if (isNaN(celsius)) {
+            alert("Por favor, ingrese un número válido en grados Celsius.");
+            return;
+        }
+
+        // Calcular los grados Fahrenheit
+        var fahrenheit = (celsius * 9/5) + 32;
+
+        // Mostrar el resultado
+        document.getElementById("resultado").innerHTML = celsius + " grados Celsius son " + fahrenheit.toFixed(2) + " grados Fahrenheit.";
+    }
+</script>
+
+</body>
+</html>

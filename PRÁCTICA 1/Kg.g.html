@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Kilogramos a Gramos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        input {
+            padding: 5px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Conversor Kilogramos a Gramos</h2>
+
+    <label for="kilogramos">Kilogramos:</label>
+    <input type="number" id="kilogramos" placeholder="Ingrese kilogramos">
+
+    <button onclick="convertirKilogramosAGramos()">Convertir</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function convertirKilogramosAGramos() {
+            var kilogramos = document.getElementById("kilogramos").value;
+            var gramos = kilogramos * 1000;
+            document.getElementById("resultado").innerHTML = kilogramos + " kilogramos son " + gramos + " gramos.";
+        }
+    </script>
+
+</body>
+</html>
